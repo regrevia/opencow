@@ -1,5 +1,6 @@
-property repoRoot : "<repo>"
-property nodeBin : "<node-bin>"
+property homePath : (do shell script "printf %s \"$HOME\"")
+property repoRoot : homePath & "/Desktop/2026/opencow"
+property nodeBin : homePath & "/.local/opt/node-v24.16.0-darwin-arm64/bin"
 property nohupBin : "/usr/bin/nohup"
 property appUrl : "http://127.0.0.1:1421"
 property pidFile : "/tmp/opencow-web-dev.pid"

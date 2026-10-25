@@ -10,16 +10,16 @@ from pathlib import Path
 from PIL import Image, ImageDraw
 
 
-ROOT = Path("<repo>")
+ROOT = Path(os.environ.get("OPENCOW_ROOT", Path(__file__).resolve().parents[1]))
 ICON_ROOT = ROOT / "assets" / "brand" / "opencow-icons"
 MASTER_DIR = ICON_ROOT / "master"
 EXPORT_DIR = ICON_ROOT / "exports"
 ICONSET_DIR = EXPORT_DIR / "opencow.iconset"
 WEB_ICONSET_DIR = EXPORT_DIR / "opencow-web.iconset"
 TAURI_ICON_DIR = ROOT / "apps" / "desktop" / "src-tauri" / "icons"
-DESKTOP_APP = Path("$HOME/Desktop/OpenCow桌面端.app")
-WEB_APP = Path("$HOME/Desktop/OpenCow网页端.app")
-LATEST_TEST_APP = Path("$HOME/Desktop/opencow最新测试版.app")
+DESKTOP_APP = Path.home() / "Desktop" / "OpenCow桌面端.app"
+WEB_APP = Path.home() / "Desktop" / "OpenCow网页端.app"
+LATEST_TEST_APP = Path.home() / "Desktop" / "opencow最新测试版.app"
 
 MASTER_PATH = MASTER_DIR / "opencow-cow-o-master.png"
 PNG_PATH = EXPORT_DIR / "icon.png"

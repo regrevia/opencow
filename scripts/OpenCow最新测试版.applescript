@@ -1,7 +1,8 @@
-property repoRoot : "<repo>"
-property nodeBin : "<node-bin>"
-property appPath : "$HOME/Desktop/OpenCow最新测试版.app"
-property desktopTarget : "$HOME/Desktop/OpenCow桌面端.app"
+property homePath : (do shell script "printf %s \"$HOME\"")
+property repoRoot : homePath & "/Desktop/2026/opencow"
+property nodeBin : homePath & "/.local/opt/node-v24.16.0-darwin-arm64/bin"
+property appPath : homePath & "/Desktop/OpenCow最新测试版.app"
+property desktopTarget : homePath & "/Desktop/OpenCow桌面端.app"
 
 on run
   my syncDesktopApp()

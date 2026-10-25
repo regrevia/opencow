@@ -141,3 +141,17 @@ UI 不直接绕过或自行推断权限、安全、Shell、审计和回退决策
 ## 当前状态
 
 OpenCow 仍处于 v1.0 桌面端开发阶段。当前优先级是打磨可靠的本地助手主链路：会话、本地 Ollama 对话、受控本地任务、权限保护的 Shell 操作、自修复预览、审计可见性、回退恢复，以及更清爽的桌面工作台体验。
+
+## 获取上游 OpenClaw
+
+`vendor/openclaw/` 不入库（见 `.gitignore`）。构建前拉取上游源码：
+
+```bash
+git clone https://github.com/openclaw/openclaw vendor/openclaw
+```
+
+上游以 MIT 许可发布，其版权声明需随分发保留，详见 [NOTICE](NOTICE)。
+
+## License
+
+本项目以 MIT 许可发布，详见 [LICENSE](LICENSE)；基于 OpenClaw 改造，上游同样为 MIT，署名见 [NOTICE](NOTICE)。

@@ -2,12 +2,12 @@
 
 set -euo pipefail
 
-REPO_ROOT="<repo>"
+REPO_ROOT="${OPENCOW_ROOT:-$(cd "$(dirname "$0")/.." && pwd)}"
 DESKTOP_APP="$HOME/Desktop/OpenCow桌面端.app"
 LOG_FILE="/tmp/opencow-latest-desktop-launch.log"
 APP_BUNDLE_ID="cn.opencow.desktop"
 APP_EXECUTABLE="opencow-desktop"
-NODE_BIN="<node-bin>"
+NODE_BIN="${NODE_BIN:-$(dirname "$(command -v node)")}"
 SYNC_SCRIPT="${REPO_ROOT}/scripts/sync-opencow-mac-apps.py"
 
 export PATH="${NODE_BIN}:${HOME}/.cargo/bin:/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"

@@ -1,6 +1,7 @@
 property logFile : "/tmp/opencow-latest-desktop-launch.log"
-property repoRoot : "<repo>"
-property launcherScript : "<repo>/scripts/start-opencow-latest-desktop-mac.command"
+property homePath : (do shell script "printf %s \"$HOME\"")
+property repoRoot : homePath & "/Desktop/2026/opencow"
+property launcherScript : homePath & "/Desktop/2026/opencow/scripts/start-opencow-latest-desktop-mac.command"
 
 on run
   display notification "正在构建并打开最新版桌面端" with title "opencow 最新测试版"

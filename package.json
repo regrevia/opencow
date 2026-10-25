@@ -26,5 +26,15 @@
   ],
   "devDependencies": {
     "@types/node": "^22.19.19"
-  }
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/regrevia/opencow.git"
+  },
+  "homepage": "https://github.com/regrevia/opencow#readme",
+  "bugs": {
+    "url": "https://github.com/regrevia/opencow/issues"
+  },
+  "author": "regrevia <189863248+regrevia@users.noreply.github.com>"
 }

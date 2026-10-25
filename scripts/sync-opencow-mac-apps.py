@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import os
 import shutil
 import subprocess
 import plistlib
@@ -11,14 +12,14 @@ import time
 from pathlib import Path
 
 
-ROOT = Path("<repo>")
+ROOT = Path(os.environ.get("OPENCOW_ROOT", Path(__file__).resolve().parents[1]))
 DESKTOP_BUILD_CMD = ["npm", "--workspace", "apps/desktop", "run", "build"]
 DESKTOP_TAURI_BUILD_CMD = ["npm", "run", "tauri:build"]
 DESKTOP_BUNDLE = ROOT / "apps" / "desktop" / "src-tauri" / "target" / "release" / "bundle" / "macos" / "opencow.app"
-DESKTOP_TARGET = Path("$HOME/Desktop/OpenCow桌面端.app")
-WEB_TARGET = Path("$HOME/Desktop/OpenCow网页端.app")
+DESKTOP_TARGET = Path.home() / "Desktop" / "OpenCow桌面端.app"
+WEB_TARGET = Path.home() / "Desktop" / "OpenCow网页端.app"
 WEB_ICON_SOURCE = ROOT / "assets" / "brand" / "opencow-icons" / "exports" / "web-launcher.icns"
-LATEST_TEST_APP = Path("$HOME/Desktop/opencow最新测试版.app")
+LATEST_TEST_APP = Path.home() / "Desktop" / "opencow最新测试版.app"
 LATEST_TEST_ICON_SOURCE = ROOT / "assets" / "brand" / "opencow-icons" / "exports" / "icon.icns"
 LATEST_TEST_EXECUTABLE_NAME = "opencow-latest-launcher"
 LATEST_TEST_LAUNCH_SCRIPT = ROOT / "scripts" / "start-opencow-latest-desktop-mac.command"

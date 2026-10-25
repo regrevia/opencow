@@ -2,8 +2,8 @@
 
 set -euo pipefail
 
-REPO_ROOT="<repo>"
-NODE_BIN="<node-bin>"
+REPO_ROOT="${OPENCOW_ROOT:-$(cd "$(dirname "$0")/.." && pwd)}"
+NODE_BIN="${NODE_BIN:-$(dirname "$(command -v node)")}"
 APP_URL="http://127.0.0.1:1421"
 PID_FILE="/tmp/opencow-web-dev.pid"
 LOG_FILE="/tmp/opencow-web-dev.log"

@@ -125,7 +125,7 @@ describe("desktop dev server contract", () => {
 
     expect(syncScript).toContain('["npm", "--workspace", "apps/desktop", "run", "build"]');
     expect(syncScript).toContain('["npm", "run", "tauri:build"]');
-    expect(syncScript).toContain('LATEST_TEST_APP = Path("$HOME/Desktop/opencow最新测试版.app")');
+    expect(syncScript).toContain('LATEST_TEST_APP = Path.home() / "Desktop" / "opencow最新测试版.app"');
     expect(syncScript).toContain("write_latest_test_launcher_app()");
     expect(syncScript.indexOf('["npm", "--workspace", "apps/desktop", "run", "build"]')).toBeLessThan(
       syncScript.indexOf("copy_app_bundle")

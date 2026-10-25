@@ -1,0 +1,12 @@
+OpenCow
+Copyright (c) 2026 regrevia
+
+This product is built on OpenClaw (https://github.com/openclaw/openclaw),
+Copyright its contributors, licensed under the MIT License. OpenClaw is not
+vendored in this repository: run `git clone https://github.com/openclaw/openclaw
+vendor/openclaw` (see README) before building. Its MIT terms apply to that
+portion of the work, and its copyright notice must be retained in
+distributions.
+
+本地优先的桌面 AI 助手，基于 OpenClaw 改造。上游 OpenClaw 以 MIT 许可发布，
+版权归其贡献者所有；其许可证与版权声明在分发时必须保留。
